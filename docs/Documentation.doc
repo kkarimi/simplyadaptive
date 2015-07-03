@@ -1,0 +1,26 @@
+﻿
+Dataset
+The dataset, provided by Peerindex, comprises a standard, pair-wise preference learning task. Each datapoint describes two individuals, A and B. For each person, 11 pre-computed, non-negative numeric features based on twitter activity (such as volume of interactions, number of followers, etc) are provided.
+
+Semantics
+The binary label represents a human judgement about which one of the two individuals is more influential. A label '1' means A is more influential than B. 0 means B is more influential than A. The goal of the challenge is to train a machine learning model which, for pairs of individuals, predicts the human judgement on who is more influential with high accuracy. Labels for the dataset have been collected by PeerIndex using an application similar to the one described in this post.
+
+A python script computing a sample benchmark solution is available here: https://gist.github.com/fhuszar/5372873
+
+Competition begins: Saturday, Apr 13, 1pm BST (12 noon UTC)
+Competition ends: Sunday, Apr 14, 1pm BST (12 noon UTC)
+
+Documentation
+
+1- Normalise data
+2- Manual exploration
+basic analysis showed the influential categories are:
+good = 1 (followers), 3 (listed), 4 (mentions)
+bad = 5 (retweets recieved), 10 (feature 2)
+
+Algorithms
+utility model
+logistic regression
+1. particle swarm
+decision-tree rapidminer
+
